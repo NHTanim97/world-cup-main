@@ -4,6 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato:wght@400;700&family=Lobster&family=Montserrat&family=Poppins:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
 
 
+/* 
+---------                                              -------------
+   * Hovering the cursor over the image will turn off the transition.
+---------                                              --------------
+*/
+
+
 *{
     margin: 0;
     padding: 0;
@@ -62,20 +69,31 @@
     text-align: center;
     color: #FFFFFF;
     margin-top: 30px;
-    transition: width 2s;
-    transition-timing-function: ease-out;
 }
 .headBtn:hover{
     background-color: #00a93b;
+    transition: 1s;
 }
 
 
 /* heading img */
 .headingImg{
     flex: 1;
+
+    /* -- z-index used for image transition-- */
+    z-index: 999;
 }
 .headingImg .bImg{
     height: 80vh;
+
+    /* --filter & trasition used for image transition-- */
+    filter: drop-shadow(-20px -20px 20px rgba(215, 215, 215, 0.5));
+    transition: 0.5s;
+}
+
+/* --headingImg .bImg:hover used for image transition-- */
+.headingImg .bImg:hover{
+    filter: drop-shadow(0px 0px 5px rgba(230, 230, 230, 0.5));
 }
 /****** header end ******/
 
